@@ -5,13 +5,13 @@
 class Cli < Formula
   desc "CLI for Alpaca Trading API"
   homepage "https://github.com/alpacahq/cli"
-  version "0.0.11"
+  version "0.0.12"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alpacahq/cli/releases/download/v0.0.11/cli_0.0.11_darwin_amd64.tar.gz"
-      sha256 "facad27ed440c1a1a6881f1272e374f13c3925ff7f43d85f2b1344f5b3abb733"
+      url "https://github.com/alpacahq/cli/releases/download/v0.0.12/cli_0.0.12_darwin_amd64.tar.gz"
+      sha256 "e6b286969f0d54ed34e22518dd6bc9c5fb96cbe6096669086f59a813962874ab"
 
       define_method(:install) do
         bin.install "alpaca"
@@ -19,8 +19,8 @@ class Cli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alpacahq/cli/releases/download/v0.0.11/cli_0.0.11_darwin_arm64.tar.gz"
-      sha256 "75839cfba74d916589448e00499e9dfa6574a0bc78972c441ad51006b31023ed"
+      url "https://github.com/alpacahq/cli/releases/download/v0.0.12/cli_0.0.12_darwin_arm64.tar.gz"
+      sha256 "a7f43847e3642838a158e56be9f39e4c70d0d7cdd920d5c709c79a07f046578b"
 
       define_method(:install) do
         bin.install "alpaca"
@@ -31,16 +31,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alpacahq/cli/releases/download/v0.0.11/cli_0.0.11_linux_amd64.tar.gz"
-      sha256 "71b6e2f751c6e4fb421c33e37cb200a5adf969ff33dd812a9be0b4d2f411d530"
+      url "https://github.com/alpacahq/cli/releases/download/v0.0.12/cli_0.0.12_linux_amd64.tar.gz"
+      sha256 "4b4e7a6bb7626099f995bac437dc1912d752ab329bb4018c81d1c8648460b97d"
       define_method(:install) do
         bin.install "alpaca"
         generate_completions_from_executable(bin/"alpaca", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alpacahq/cli/releases/download/v0.0.11/cli_0.0.11_linux_arm64.tar.gz"
-      sha256 "27d359aa80fc8eb98b4dc44952c19d7564cfdb63dc43cfcc094f471b536e29dd"
+      url "https://github.com/alpacahq/cli/releases/download/v0.0.12/cli_0.0.12_linux_arm64.tar.gz"
+      sha256 "aac702845b2129082adb08c7b8973173bf4e32da4b019bdc6674cc5901e4545b"
       define_method(:install) do
         bin.install "alpaca"
         generate_completions_from_executable(bin/"alpaca", "completion")
